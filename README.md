@@ -1,2 +1,2 @@
-# atoms
-atoms for react-native and web
+# Molecules
+Molecules for react-native
