@@ -24,12 +24,13 @@ export default {
             format: 'umd',
             globals: {
                 'react': 'React',
-                '@emotion/native': '@emotion/native',
-                'emotion-theming': 'emotion-theming',
+                'styled-components/native': 'styled-components/native',
                 'react-native': 'react-native',
                 'react-native-reanimated': 'react-native-reanimated',
                 'react-native-gesture-handler': 'react-native-gesture-handler',
                 'react-native-status-bar-height' : 'react-native-status-bar-height',
+                'lottie-react-native' : 'lottie-react-native',
+                '@killerwink/lottie-react-native-color' : '@killerwink/lottie-react-native-color',
             },
         },
     ],
@@ -52,11 +53,12 @@ export default {
     ],
     external: [
         'react',
-        '@emotion/native',
-        'emotion-theming',
+        'styled-components',
         'react-native',
         'react-native-reanimated',
         'react-native-gesture-handler',
         'react-native-status-bar-height',
+        'lottie-react-native',
+        '@killerwink/lottie-react-native-color',
     ]
 };

@@ -1,10 +1,15 @@
 const fonts = {
-    xsmall: '12px',
-    small: '18px',
-    medium: '24px',
-    large: '36px',
-    xlarge: '66px',
-    fontFamily1: '',
-    fontFamily2: '',
+  xsmall: "12px",
+  lhXsmall: "15px",
+  small: "18px",
+  lhSmall: "21px",
+  medium: "24px",
+  lhMedium: "27px",
+  large: "36px",
+  lhLarge: "39px",
+  xlarge: "66px",
+  lhXlarge: "69px",
+  fontFamily1: "Cochin",
+  fontFamily2: "Cochin",
 };
 export default fonts;

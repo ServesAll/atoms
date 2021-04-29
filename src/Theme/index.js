@@ -1,13 +1,21 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider, ThemeContext } from 'styled-components/native';
 import { theme as defaultTheme } from './definitions';
+const ThemeWrapperContext = React.createContext();
 
 const ThemeWrapper = ({children, theme = {}}) => {
     return (
-        <ThemeProvider theme={{...defaultTheme, ...theme}}>
-            {children}
-        </ThemeProvider>
+        <ThemeWrapperContext.Provider
+            value={{...theme}}>
+            <ThemeProvider theme={{...defaultTheme, ...theme}}>
+                {children}
+            </ThemeProvider>
+        </ThemeWrapperContext.Provider>
     );
 };
 
-export default ThemeWrapper;
+const useThemeContext = () => {
+    return React.useContext(ThemeContext);
+};
+
+export {ThemeContext, ThemeWrapper, useThemeContext};
