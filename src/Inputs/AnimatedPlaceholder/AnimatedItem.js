@@ -1,13 +1,13 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState } from "react";
 import Animated, {
   useAnimatedStyle,
   withRepeat,
   withTiming,
   useSharedValue,
   runOnJS,
-} from 'react-native-reanimated';
+} from "react-native-reanimated";
 
-const AnimatedPlaceholder = ({children}) => {
+const AnimatedPlaceholder = ({ children }) => {
   const [childNumber, setChildNumber] = useState(0);
   const fade = useSharedValue(7);
 
@@ -25,7 +25,7 @@ const AnimatedPlaceholder = ({children}) => {
 
   useEffect(() => {
     fade.value = withRepeat(
-      withTiming(0, {duration: 2000}, (finished, currentValue) => {
+      withTiming(0, { duration: 2000 }, (finished, currentValue) => {
         if (finished) {
           if (currentValue === 0) {
             runOnJS(runNewChild)();
@@ -33,12 +33,12 @@ const AnimatedPlaceholder = ({children}) => {
         }
       }),
       -1,
-      true,
+      true
     );
   }, []);
 
   return (
-    <Animated.View style={[{opacity: 1}, animatedStyle]}>
+    <Animated.View style={[{ opacity: 1 }, animatedStyle]}>
       {children[childNumber]}
     </Animated.View>
   );

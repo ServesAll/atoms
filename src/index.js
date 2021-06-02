@@ -27,6 +27,7 @@ import {
 } from "./Buttons";
 import Loader from "./Loader";
 import Success from "./Success";
+import Error from "./Error";
 import Icon from "./Icons";
 import FlatList from "./FlatList";
 import Header from "./Header";
@@ -66,6 +67,7 @@ export {
   AnimatedButton,
   Loader,
   Success,
+  Error,
   Icon,
   FlatList,
   Header,

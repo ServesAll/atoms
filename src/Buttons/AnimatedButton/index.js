@@ -1,10 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  Dimensions,
-  KeyboardAvoidingView,
-  Platform,
-  SafeAreaView,
-} from "react-native";
+import React, { useEffect } from "react";
+import { Dimensions } from "react-native";
 import { Center } from "../../Layout";
 import Animated, {
   useAnimatedStyle,
@@ -23,6 +18,8 @@ const AnimatedButton = ({
   LoaderElement,
   successElement,
   success,
+  error,
+  errorElement,
   style,
 }) => {
   const scale = useSharedValue(0);
@@ -104,7 +101,7 @@ const AnimatedButton = ({
           minWidth: 70,
           zIndex: 11,
           backgroundColor:
-            loading || success
+            loading || success || error
               ? "rgba(255, 255, 255, 0.8)"
               : "rgba(255, 255, 255, 0)",
         },
@@ -120,7 +117,9 @@ const AnimatedButton = ({
             loading={loading}
             LoaderElement={LoaderElement}
             successElement={successElement}
+            errorElement={errorElement}
             success={success}
+            error={error}
             style={style}
           >
             {children}

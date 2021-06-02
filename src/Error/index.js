@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import LottieView from "lottie-react-native";
-import success from "./success.json";
-import { LoaderWrapper } from "./Success.style";
+import error from "./error.json";
+import { LoaderWrapper } from "./Error.style";
 
-export default function Success({ style }) {
+export default function Error({ style }) {
   const loadingRef = useRef();
 
   return (
@@ -17,7 +17,7 @@ export default function Success({ style }) {
         }}
         autoPlay={true}
         loop={false}
-        source={success}
+        source={error}
       />
     </LoaderWrapper>
   );

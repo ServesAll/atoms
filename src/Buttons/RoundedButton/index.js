@@ -5,8 +5,6 @@ import Animated, {
   useSharedValue,
   withTiming,
   withSequence,
-  useDerivedValue,
-  Easing,
 } from "react-native-reanimated";
 
 const RoundedBtn = ({
@@ -43,11 +41,10 @@ const RoundedBtn = ({
               }),
               withTiming(1, {
                 duration: 200,
-                easing: Easing.in(Easing.elastic(2)),
               })
             );
-            onClick();
           }}
+          onPress={() => onClick()}
         >
           {children}
         </ButtonStyle>

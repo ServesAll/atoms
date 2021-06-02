@@ -1,13 +1,13 @@
-import React from 'react';
-import {BorderIdle, BorderActive} from './LineAnimation.style';
-import {Row} from '../../../Layout';
+import React from "react";
+import { BorderIdle, BorderActive } from "./LineAnimation.style";
+import { Row } from "../../../Layout";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
-} from 'react-native-reanimated';
+} from "react-native-reanimated";
 
-const Line = ({active, borderColorIdle, borderColorActive}) => {
+const Line = ({ active, borderColorIdle, borderColorActive }) => {
   const widthActive = useSharedValue(0);
 
   const animatedStyleWidthActive = useAnimatedStyle(() => {
@@ -30,7 +30,7 @@ const Line = ({active, borderColorIdle, borderColorActive}) => {
         color={borderColorIdle}
         onLayout={(e) => (widthActive.value = e.nativeEvent.layout.width)}
       />
-      <Animated.View style={[{zIndex: 11}, animatedStyleWidthActive]}>
+      <Animated.View style={[{ zIndex: 11 }, animatedStyleWidthActive]}>
         <BorderActive color={borderColorActive} />
       </Animated.View>
     </Row>

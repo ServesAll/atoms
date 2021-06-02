@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   Dimensions,
   KeyboardAvoidingView,
@@ -23,6 +23,7 @@ const RoundBtn = ({
   LoaderElement,
   successElement,
   success,
+  error,
   style,
 }) => {
   const scale = useSharedValue(0);
@@ -59,7 +60,7 @@ const RoundBtn = ({
   }, []);
 
   useEffect(() => {
-    if (loading) {
+    if (loading || success) {
       width.value = withTiming(Dimensions.get("window").width, {
         duration: 250,
       });
@@ -92,7 +93,7 @@ const RoundBtn = ({
         });
       }, 600);
     }
-  }, [loading]);
+  }, [loading, success]);
 
   return (
     <KeyboardAvoidingView

@@ -72,7 +72,8 @@ const RoundBtn = ({
       <ButtonStyle
         active={active}
         color={color}
-        onPress={() => {
+        success={success}
+        onPressIn={() => {
           scale.value = withSequence(
             withTiming(0.9, {
               duration: 80,
@@ -82,8 +83,8 @@ const RoundBtn = ({
               easing: Easing.in(Easing.elastic(2)),
             })
           );
-          onClick();
         }}
+        onPress={() => onClick()}
       >
         {success && successElement}
         {!success && loading && LoaderElement}

@@ -18,6 +18,8 @@ const RoundBtn = ({
   LoaderElement,
   successElement,
   success,
+  error,
+  errorElement,
 }) => {
   const scale = useSharedValue(1);
   const width = useSharedValue(70);
@@ -70,6 +72,8 @@ const RoundBtn = ({
       <ButtonStyle
         active={active}
         color={color}
+        success={success}
+        error={error}
         onPress={() => {
           scale.value = withSequence(
             withTiming(0.9, {
@@ -84,8 +88,9 @@ const RoundBtn = ({
         }}
       >
         {success && successElement}
-        {!success && loading && LoaderElement}
-        {!success && !loading && children}
+        {error && errorElement}
+        {!success && !error && loading && LoaderElement}
+        {!success && !error && !loading && children}
       </ButtonStyle>
     </Animated.View>
   );

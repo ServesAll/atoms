@@ -46,6 +46,12 @@ import beachclubslidos from "./beachclubslidos.json";
 import toursadventure from "./toursadventure.json";
 import good from "./good.json";
 import arrowDownRight from "./arrowDownLeft.json";
+import filled_add from "./filled_add.json";
+import filled_calendar from "./filled_calendar.json";
+import filled_closed from "./filled_closed.json";
+import filled_minus from "./filled_minus.json";
+import add from "./add.json";
+import creditCard from "./credit_card.json";
 
 const allCategories = {
   restaurants,
@@ -95,6 +101,12 @@ const allCategories = {
   divider,
   good,
   arrowDownRight,
+  add,
+  filled_add,
+  filled_calendar,
+  filled_closed,
+  filled_minus,
+  creditCard,
 };
 
 export default allCategories;
