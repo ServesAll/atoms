@@ -52,6 +52,13 @@ import filled_closed from "./filled_closed.json";
 import filled_minus from "./filled_minus.json";
 import add from "./add.json";
 import creditCard from "./credit_card.json";
+import name from "./name.json";
+import category from "./category.json";
+import location from "./location.json";
+import media from "./media.json";
+import calendar from "./calendar.json";
+import diningTable from "./DiningTable.json";
+import house from "./house.json";
 
 const allCategories = {
   restaurants,
@@ -107,6 +114,13 @@ const allCategories = {
   filled_closed,
   filled_minus,
   creditCard,
+  name,
+  category,
+  location,
+  media,
+  calendar,
+  diningTable,
+  house,
 };
 
 export default allCategories;
