@@ -15,6 +15,7 @@ const AnimatedButton = ({
   color,
   onClick = () => {},
   loading,
+  leftElement,
   LoaderElement,
   successElement,
   success,
@@ -26,7 +27,8 @@ const AnimatedButton = ({
   const width = useSharedValue(70);
   const height = useSharedValue(70);
   const right = useSharedValue(0);
-  const bottom = useSharedValue(0);
+  const left = useSharedValue(0);
+  const bottom = useSharedValue(10);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
@@ -44,6 +46,7 @@ const AnimatedButton = ({
       minWidth: width.value,
       height: height.value,
       right: right.value,
+      left: left.value,
       bottom: bottom.value,
     };
   });
@@ -73,9 +76,14 @@ const AnimatedButton = ({
       });
     } else {
       setTimeout(() => {
-        width.value = withTiming(200, {
-          duration: 200,
-        });
+        width.value = withTiming(
+          leftElement
+            ? Dimensions.get("window").width / 2
+            : Dimensions.get("window").width - 60,
+          {
+            duration: 200,
+          }
+        );
         height.value = withTiming(70, {
           duration: 200,
         });
@@ -83,7 +91,7 @@ const AnimatedButton = ({
           duration: 200,
           easing: Easing.in(Easing.elastic(2)),
         });
-        bottom.value = withTiming(0, {
+        bottom.value = withTiming(10, {
           duration: 200,
           easing: Easing.in(Easing.elastic(2)),
         });
@@ -115,6 +123,7 @@ const AnimatedButton = ({
             color={color}
             onClick={onClick}
             loading={loading}
+            leftElement={leftElement}
             LoaderElement={LoaderElement}
             successElement={successElement}
             errorElement={errorElement}

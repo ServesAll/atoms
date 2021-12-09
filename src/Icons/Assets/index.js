@@ -59,6 +59,19 @@ import media from "./media.json";
 import calendar from "./calendar.json";
 import diningTable from "./DiningTable.json";
 import house from "./house.json";
+import arrowRight from "./arrowRight.json";
+import settings from "./settings.json";
+import time from "./time.json";
+import day from "./day.json";
+import boatResources from "./boatResources.json";
+import fitnessResources from "./fitnessResources.json";
+import humanResources from "./humanResources.json";
+import lidoResources from "./lidoResources.json";
+import spaResources from "./spaResources.json";
+import sportsResources from "./sportsResources.json";
+import toursResources from "./toursResources.json";
+import plus from "./plus.json";
+import minus from "./minus.json";
 
 const allCategories = {
   restaurants,
@@ -121,6 +134,19 @@ const allCategories = {
   calendar,
   diningTable,
   house,
+  arrowRight,
+  settings,
+  time,
+  day,
+  boatResources,
+  fitnessResources,
+  humanResources,
+  lidoResources,
+  spaResources,
+  sportsResources,
+  toursResources,
+  plus,
+  minus,
 };
 
 export default allCategories;

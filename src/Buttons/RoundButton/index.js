@@ -13,6 +13,7 @@ const RoundBtn = ({
   color,
   onClick = () => {},
   style,
+  size = "big",
 }) => {
   const scale = useSharedValue(1);
 
@@ -31,8 +32,10 @@ const RoundBtn = ({
     <ButtonWrapper>
       <Animated.View style={[animatedStyle]}>
         <ButtonStyle
+          size={size}
           active={active}
           color={color}
+          style={style}
           onPressIn={() => {
             scale.value = withSequence(
               withTiming(0.9, {

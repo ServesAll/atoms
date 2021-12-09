@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Dimensions } from "react-native";
 import { ButtonStyle } from "./FloatingButton.style";
 import Animated, {
   useAnimatedStyle,
@@ -20,6 +21,7 @@ const RoundBtn = ({
   success,
   error,
   errorElement,
+  leftElement = false,
 }) => {
   const scale = useSharedValue(1);
   const width = useSharedValue(70);
@@ -44,10 +46,15 @@ const RoundBtn = ({
   useEffect(() => {
     setTimeout(
       () =>
-        (width.value = withTiming(200, {
-          duration: 450,
-          easing: Easing.in(Easing.elastic(2)),
-        })),
+        (width.value = withTiming(
+          leftElement
+            ? Dimensions.get("window").width / 2
+            : Dimensions.get("window").width - 60,
+          {
+            duration: 350,
+            easing: Easing.in(Easing.elastic(1.4)),
+          }
+        )),
       200
     );
   }, []);
@@ -60,9 +67,14 @@ const RoundBtn = ({
     } else {
       width.value = withDelay(
         800,
-        withTiming(200, {
-          duration: 250,
-        })
+        withTiming(
+          leftElement
+            ? Dimensions.get("window").width / 2 - 30
+            : Dimensions.get("window").width - 60,
+          {
+            duration: 250,
+          }
+        )
       );
     }
   }, [loading]);
@@ -81,7 +93,7 @@ const RoundBtn = ({
             }),
             withTiming(1, {
               duration: 200,
-              easing: Easing.in(Easing.elastic(2)),
+              easing: Easing.in(Easing.elastic(1.4)),
             })
           );
           onClick();

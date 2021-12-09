@@ -33,6 +33,7 @@ import Icon from "./Icons";
 import FlatList from "./FlatList";
 import Header from "./Header";
 import BottomNavBar from "./BottomNavBar";
+import Switch from "./Switch";
 
 export {
   ThemeWrapper,
@@ -74,4 +75,5 @@ export {
   FlatList,
   Header,
   BottomNavBar,
+  Switch,
 };
