@@ -72,6 +72,8 @@ import sportsResources from "./sportsResources.json";
 import toursResources from "./toursResources.json";
 import plus from "./plus.json";
 import minus from "./minus.json";
+import visible from "./visible.json";
+import nonVisible from "./non-visible.json";
 
 const allCategories = {
   restaurants,
@@ -147,6 +149,8 @@ const allCategories = {
   toursResources,
   plus,
   minus,
+  visible,
+  nonVisible,
 };
 
 export default allCategories;
