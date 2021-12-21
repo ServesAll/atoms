@@ -46,6 +46,7 @@ export default function Switch({
   value = false,
   onValueChange = () => {},
   micro = false,
+  style,
 }) {
   const [isEnabled, setIsEnabled] = useState(value);
   const toggleSwitch = () => {
@@ -66,6 +67,7 @@ export default function Switch({
         borderWidth: 1,
         borderColor: isEnabled ? colors.color15 : colors.color10,
         opacity: enabled ? 1 : 0.6,
+        ...style,
       }}
       color={colors.color1}
       onClick={toggleSwitch}
