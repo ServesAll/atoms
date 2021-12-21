@@ -1,4 +1,5 @@
 const fonts = {
+  xssmall: "14px",
   xsmall: "16px",
   lhXsmall: "15px",
   small: "18px",

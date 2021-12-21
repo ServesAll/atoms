@@ -36,6 +36,15 @@ export const H4 = styled.Text`
   ${(props) => props.style};
 `;
 
+export const H5 = styled.Text`
+  font-size: ${(props) => props.theme.xssmall};
+  font-family: ${(props) => props.fontFamily || props.theme.fontFamily1};
+  text-align: ${(props) => props.align};
+  color: ${(props) => props.color || props.theme.color2};
+  line-height: ${(props) => props.theme.xssmall};
+  ${(props) => props.style};
+`;
+
 export const Span = styled.Text`
   font-size: ${(props) => props.theme.small};
   font-family: ${(props) => props.fontFamily || props.theme.fontFamily1};
