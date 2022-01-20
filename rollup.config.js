@@ -61,5 +61,8 @@ export default {
     "react-native-status-bar-height",
     "lottie-react-native",
     "@killerwink/lottie-react-native-color",
+    "styled-components/native",
+    "react-native-gesture-handler",
+    "styled-components",
   ],
 };
