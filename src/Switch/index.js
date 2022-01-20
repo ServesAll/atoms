@@ -46,6 +46,8 @@ export default function Switch({
   value = false,
   onValueChange = () => {},
   micro = false,
+  radio = false,
+  borderColor = false,
   style,
 }) {
   const [isEnabled, setIsEnabled] = useState(value);
@@ -53,7 +55,7 @@ export default function Switch({
     enabled &&
       setIsEnabled((previousState) => {
         onValueChange(!previousState);
-        return !previousState;
+        return !radio ? !previousState : true;
       });
   };
 
@@ -65,11 +67,17 @@ export default function Switch({
     <RoundedBtn
       style={{
         borderWidth: 1,
-        borderColor: isEnabled ? colors.color15 : colors.color10,
+        borderColor: isEnabled
+          ? borderColor
+            ? borderColor
+            : colors.color15
+          : borderColor
+          ? borderColor
+          : colors.color10,
         opacity: enabled ? 1 : 0.6,
         ...style,
       }}
-      color={colors.color1}
+      color="transparent"
       onClick={toggleSwitch}
     >
       <CheckMark isEnabled={isEnabled} micro={micro} />

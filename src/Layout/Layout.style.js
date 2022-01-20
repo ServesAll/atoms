@@ -69,6 +69,12 @@ export const MarginTopElement = styled.View`
   ${(props) => props.style};
 `;
 
+export const MarginRightElement = styled.View`
+  margin-right: ${(props) => props.theme.margin};
+  flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
+  ${(props) => props.style};
+`;
+
 export const PaddingElement = styled.View`
   padding: ${(props) => props.theme.padding};
   flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
@@ -101,6 +107,12 @@ export const RowElement = styled.View`
 export const StretchElement = styled.View`
   align-items: stretch;
   align-self: stretch;
+  flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
+  ${(props) => props.style};
+`;
+
+export const BoxElement = styled.View`
+  flex: 1;
   flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
   ${(props) => props.style};
 `;

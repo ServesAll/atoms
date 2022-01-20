@@ -6,6 +6,7 @@ import MarginHorizontal from "./MarginHorizontal";
 import MarginVertical from "./MarginVertical";
 import MarginBottom from "./MarginBottom";
 import MarginTop from "./MarginTop";
+import MarginRight from "./MarginRight";
 import Padding from "./Padding";
 import PaddingHorizontal from "./PaddingHorizontal";
 import PaddingVertical from "./PaddingVertical";
@@ -14,6 +15,8 @@ import Row from "./Row";
 import Stretch from "./Stretch";
 import FullScreen from "./FullScreen";
 import WebSmallWrapper from "./WebSmallWrapper";
+import Box from "./Box";
+import RoundedTopBox from "./RoundedTopBox";
 
 export {
   Center,
@@ -24,6 +27,7 @@ export {
   MarginVertical,
   MarginBottom,
   MarginTop,
+  MarginRight,
   Padding,
   PaddingHorizontal,
   PaddingVertical,
@@ -32,4 +36,6 @@ export {
   Stretch,
   FullScreen,
   WebSmallWrapper,
+  Box,
+  RoundedTopBox,
 };

@@ -1,7 +1,7 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const BorderIdle = styled.View`
-  height: 4px;
+  height: 18px;
   background-color: ${(props) => props.color};
   flex: 1;
   position: absolute;
@@ -10,7 +10,7 @@ export const BorderIdle = styled.View`
 `;
 
 export const BorderActive = styled.View`
-  height: 4px;
+  height: 18px;
   background-color: ${(props) => props.color};
   z-index: 11;
 `;
