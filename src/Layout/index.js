@@ -11,6 +11,7 @@ import Padding from "./Padding";
 import PaddingHorizontal from "./PaddingHorizontal";
 import PaddingVertical from "./PaddingVertical";
 import PaddingTop from "./PaddingTop";
+import PaddingBottom from "./PaddingBottom";
 import Row from "./Row";
 import Stretch from "./Stretch";
 import FullScreen from "./FullScreen";
@@ -32,6 +33,7 @@ export {
   PaddingHorizontal,
   PaddingVertical,
   PaddingTop,
+  PaddingBottom,
   Row,
   Stretch,
   FullScreen,

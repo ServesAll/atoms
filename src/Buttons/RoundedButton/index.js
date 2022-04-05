@@ -28,28 +28,26 @@ const RoundedBtn = ({
   });
 
   return (
-    <ButtonWrapper>
-      <Animated.View style={[animatedStyle]}>
-        <ButtonStyle
-          active={active}
-          color={color}
-          style={style}
-          onPressIn={() => {
-            scale.value = withSequence(
-              withTiming(0.9, {
-                duration: 80,
-              }),
-              withTiming(1, {
-                duration: 200,
-              })
-            );
-          }}
-          onPress={() => onClick()}
-        >
-          {children}
-        </ButtonStyle>
-      </Animated.View>
-    </ButtonWrapper>
+    <Animated.View style={[{ flex: 1 }, animatedStyle]}>
+      <ButtonStyle
+        active={active}
+        color={color}
+        style={style}
+        onPressIn={() => {
+          scale.value = withSequence(
+            withTiming(0.9, {
+              duration: 80,
+            }),
+            withTiming(1, {
+              duration: 200,
+            })
+          );
+        }}
+        onPress={() => onClick()}
+      >
+        {children}
+      </ButtonStyle>
+    </Animated.View>
   );
 };
 

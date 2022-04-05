@@ -32,7 +32,7 @@ export const H4 = styled.Text`
   font-family: ${(props) => props.fontFamily || props.theme.fontFamily1};
   text-align: ${(props) => props.align};
   color: ${(props) => props.color || props.theme.color2};
-  line-height: ${(props) => props.theme.xsmall};
+  line-height: ${(props) => props.theme.small};
   ${(props) => props.style};
 `;
 

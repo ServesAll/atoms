@@ -6,7 +6,7 @@ import { RoundedBtn } from "../Buttons";
 import colors from "../Theme/definitions/colors";
 import { Center } from "../Layout";
 
-const CheckMark = ({ isEnabled, micro }) => {
+const CheckMark = ({ fat, isEnabled, micro }) => {
   const loadingRef = useRef();
   return (
     <View
@@ -17,8 +17,8 @@ const CheckMark = ({ isEnabled, micro }) => {
         width: 30,
         height: 30,
         borderRadius: 15,
-        borderWidth: 1,
-        borderColor: isEnabled ? colors.color1 : colors.color10,
+        borderWidth: fat ? 2 : 1,
+        borderColor: isEnabled ? colors.color1 : colors.color7,
         backgroundColor: colors.color1,
       }}
     >
@@ -46,6 +46,7 @@ export default function Switch({
   value = false,
   onValueChange = () => {},
   micro = false,
+  fat = false,
   radio = false,
   borderColor = false,
   style,
@@ -66,22 +67,22 @@ export default function Switch({
   return (
     <RoundedBtn
       style={{
-        borderWidth: 1,
+        borderWidth: fat ? 2 : 1,
         borderColor: isEnabled
           ? borderColor
             ? borderColor
             : colors.color15
           : borderColor
           ? borderColor
-          : colors.color10,
+          : colors.color7,
         opacity: enabled ? 1 : 0.6,
         ...style,
       }}
       color="transparent"
       onClick={toggleSwitch}
     >
-      <CheckMark isEnabled={isEnabled} micro={micro} />
       {children}
+      <CheckMark fat={fat} isEnabled={isEnabled} micro={micro} />
     </RoundedBtn>
   );
 }

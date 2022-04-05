@@ -74,6 +74,11 @@ import plus from "./plus.json";
 import minus from "./minus.json";
 import visible from "./visible.json";
 import nonVisible from "./non-visible.json";
+import big_close from "./big_close.json";
+import big_good from "./big_good.json";
+import big_time from "./big_time.json";
+import big_calendar from "./big_calendar.json";
+import big_pax from "./big_pax.json";
 
 const allCategories = {
   restaurants,
@@ -151,6 +156,11 @@ const allCategories = {
   minus,
   visible,
   nonVisible,
+  big_close,
+  big_good,
+  big_time,
+  big_calendar,
+  big_pax,
 };
 
 export default allCategories;
