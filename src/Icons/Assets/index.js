@@ -16,6 +16,7 @@ import home from "./home.json";
 import search from "./search.json";
 import account from "./account.json";
 import back from "./back.json";
+import back_fat from "./back_fat.json";
 import merchant_activity from "./merchant_activity.json";
 import merchant_date from "./merchant_date.json";
 import merchant_time from "./merchant_time.json";
@@ -100,6 +101,7 @@ const allCategories = {
   search,
   account,
   back,
+  back_fat,
   merchant_activity,
   merchant_date,
   merchant_time,

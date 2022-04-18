@@ -1,6 +1,6 @@
 const colors = {
   color1: "#FFFFFF",
-  color2: "#020202",
+  color2: "#2d3436",
   color3: "#74b9ff",
   color3light: "#E1F0FF",
   color4: "#0984e3",
@@ -31,5 +31,6 @@ const colors = {
   color18: "#81ecec",
   darkYellow: "#fdcb6e",
   green: "#55efc4",
+  greyText: "#b2bec3",
 };
 export default colors;

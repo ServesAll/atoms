@@ -13,6 +13,7 @@ const Input = ({
   borderColorError,
   textChange = () => {},
   value,
+  defaultValue,
   multiline = false,
   numberOfLines = 1,
   maxLength = 1000,
@@ -24,7 +25,7 @@ const Input = ({
   error,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
-  const [textValue, setTextValue] = useState(value);
+  const [textValue, setTextValue] = useState(value || defaultValue);
   const inputRef = useRef();
 
   useEffect(() => {
@@ -58,6 +59,7 @@ const Input = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           onChangeText={(text) => setTextValue(text)}
+          defaultValue={defaultValue}
           value={value}
           multiline={multiline}
           numberOfLines={numberOfLines}
