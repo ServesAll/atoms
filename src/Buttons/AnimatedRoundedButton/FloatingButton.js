@@ -9,7 +9,7 @@ import Animated, {
   withDelay,
 } from "react-native-reanimated";
 
-const RoundedBtn = ({
+const RoundBtn = ({
   children,
   active,
   color,
@@ -20,25 +20,19 @@ const RoundedBtn = ({
   success,
   error,
   errorElement,
-  leftElement = false,
 }) => {
   const scale = useSharedValue(1);
-  const width = useSharedValue("100%");
+  const height = useSharedValue("54px");
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
+      height: height.value,
       opacity: scale.value,
       transform: [
         {
           scale: scale.value,
         },
       ],
-    };
-  });
-
-  const animatedWidth = useAnimatedStyle(() => {
-    return {
-      width: width.value,
     };
   });
 
@@ -58,7 +52,7 @@ const RoundedBtn = ({
   }, [loading]);
 
   return (
-    <Animated.View style={[animatedStyle, animatedWidth]}>
+    <Animated.View style={[animatedStyle]}>
       <ButtonStyle
         active={active}
         color={color}
@@ -86,4 +80,4 @@ const RoundedBtn = ({
   );
 };
 
-export default RoundedBtn;
+export default RoundBtn;

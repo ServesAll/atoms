@@ -30,6 +30,7 @@ import {
   FloatingBtn,
   AnimatedButton,
   FeedbackButton,
+  AnimatedRoundedButton,
 } from "./Buttons";
 import Loader from "./Loader";
 import Success from "./Success";
@@ -39,6 +40,8 @@ import FlatList from "./FlatList";
 import Header from "./Header";
 import BottomNavBar from "./BottomNavBar";
 import Switch from "./Switch";
+import SwipeButton from "./SlideToConfirm";
+import ErrorText from "./ErrorText";
 
 export {
   ThemeWrapper,
@@ -87,4 +90,7 @@ export {
   Header,
   BottomNavBar,
   Switch,
+  SwipeButton,
+  ErrorText,
+  AnimatedRoundedButton,
 };

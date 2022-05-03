@@ -4,6 +4,7 @@ import RoundBtn from "./RoundButton";
 import FloatingBtn from "./FloatingButton";
 import AnimatedButton from "./AnimatedButton";
 import FeedbackButton from "./FeedbackButton";
+import AnimatedRoundedButton from "./AnimatedRoundedButton";
 
 export {
   TextBtn,
@@ -12,4 +13,5 @@ export {
   FloatingBtn,
   AnimatedButton,
   FeedbackButton,
+  AnimatedRoundedButton,
 };

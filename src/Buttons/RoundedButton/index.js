@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonWrapper, ButtonStyle } from "./RoundedButton.style";
+import { ButtonStyle } from "./RoundedButton.style";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,

@@ -1,10 +1,9 @@
-import React, {useRef} from 'react';
-import LottieView from 'lottie-react-native';
-import loader from './loader.json';
-import {LoaderWrapper} from './Loading.style';
-import changeSVGColor from '@killerwink/lottie-react-native-color';
+import React, { useRef } from "react";
+import LottieView from "lottie-react-native";
+import loader from "./loader.json";
+import { LoaderWrapper } from "./Loading.style";
 
-export default function Loader({color, style}) {
+export default function Loader({ color, style }) {
   const loadingRef = useRef();
 
   return (
@@ -14,13 +13,18 @@ export default function Loader({color, style}) {
         style={{
           height: 100,
           width: 100,
-            ...style,
+          ...style,
         }}
         autoPlay={true}
         loop={true}
-        source={changeSVGColor(loader, color)}
+        colorFilters={[
+          {
+            keypath: "LOADER",
+            color: color,
+          },
+        ]}
+        source={loader}
       />
     </LoaderWrapper>
   );
-};
-
+}
