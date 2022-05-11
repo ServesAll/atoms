@@ -42,12 +42,6 @@ export default {
     resolve({
       extensions: [".js", ".jsx", ".json", ".png"],
     }),
-    commonjs({
-      namedExports: {
-        "react-is": Object.keys(require("react-is")),
-      },
-      include: /node_modules/,
-    }),
     nodePolyfills(),
     babel({
       babelHelpers: "bundled",
