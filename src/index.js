@@ -22,7 +22,7 @@ import {
   Box,
   RoundedTopBox,
 } from "./Layout";
-import { Input, AnimatedPlaceholder, InputOtp } from "./Inputs";
+import { Input, AnimatedPlaceholder, InputOtp, InputNormal } from "./Inputs";
 import {
   TextBtn,
   RoundedBtn,
@@ -42,6 +42,7 @@ import BottomNavBar from "./BottomNavBar";
 import Switch from "./Switch";
 import SwipeButton from "./SlideToConfirm";
 import ErrorText from "./ErrorText";
+import CountryList from "./CountryFlatList";
 
 export {
   ThemeWrapper,
@@ -74,6 +75,7 @@ export {
   Box,
   RoundedTopBox,
   Input,
+  InputNormal,
   AnimatedPlaceholder,
   InputOtp,
   TextBtn,
@@ -93,4 +95,5 @@ export {
   SwipeButton,
   ErrorText,
   AnimatedRoundedButton,
+  CountryList,
 };
