@@ -15,13 +15,19 @@ const BottomNavBar = (props) => {
   };
 
   useEffect(() => {
-    Keyboard.addListener("keyboardDidShow", _keyboardDidShow);
-    Keyboard.addListener("keyboardDidHide", _keyboardDidHide);
+    const showSubscription = Keyboard.addListener(
+      "keyboardDidShow",
+      _keyboardDidShow
+    );
+    const hideSubscription = Keyboard.addListener(
+      "keyboardDidHide",
+      _keyboardDidHide
+    );
 
     // cleanup function
     return () => {
-      Keyboard.remove("keyboardDidShow", _keyboardDidShow);
-      Keyboard.remove("keyboardDidHide", _keyboardDidHide);
+      showSubscription.remove();
+      hideSubscription.remove();
     };
   }, []);
 
