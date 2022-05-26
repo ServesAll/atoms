@@ -36,6 +36,7 @@ const colors = {
   greenLight: "#F3FFFC",
   greenDark: "#236A56",
   greyText: "#b2bec3",
+  greyButton: "#94A3A9",
   red: "#ff7675",
   redlight: "#FFFAF9",
   redDark: "#9C4140",

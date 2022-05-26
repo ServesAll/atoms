@@ -24,6 +24,8 @@ const Input = ({
   keyboardVerticalOffset = 0,
   hasError = false,
   error,
+  isRightBound = false,
+  isLeftBound = false,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [textValue, setTextValue] = useState(value || defaultValue);
@@ -50,6 +52,8 @@ const Input = ({
         }}
       >
         <BorderWrapper
+          isRightBound={isRightBound}
+          isLeftBound={isLeftBound}
           active={isFocused}
           color={
             !hasError

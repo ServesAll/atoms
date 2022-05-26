@@ -14,6 +14,7 @@ const RoundedBtn = ({
   onClick = () => {},
   style,
   size = "big",
+  smallBorder = false,
   hitSlop = 0,
 }) => {
   const scale = useSharedValue(1);
@@ -32,6 +33,7 @@ const RoundedBtn = ({
   return (
     <Animated.View style={[animatedStyle]}>
       <ButtonStyle
+        smallBorder={smallBorder}
         hitSlop={hitSlop}
         size={size}
         active={active}

@@ -1,19 +1,16 @@
 {
   "name": "@servesall/atoms",
-  "version": "1.1.6",
+  "version": "1.1.8",
   "description": "Atoms for react-native",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
-  "directories": {
-    "doc": "docs"
-  },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm i --legacy-peer-deps && rollup -c && npm publish"
+    "build": "npm i && rollup -c && npm publish"
   },
   "repository": {
     "type": "git",
@@ -26,8 +23,7 @@
     "react-native-reanimated": "*"
   },
   "dependencies": {
-    "react-native-status-bar-height": "^2.6.0",
-    "styled-components": "^5.3.5"
+    "react-native-status-bar-height": "^2.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -40,7 +36,6 @@
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
-    "react-native-reanimated": "^2.8.0",
     "rollup": "^2.72.1",
     "rollup-plugin-node-polyfills": "^0.2.1"
   },

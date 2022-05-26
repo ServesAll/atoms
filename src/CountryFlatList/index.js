@@ -31,14 +31,14 @@ const Item = ({ item, setSelected, variant }) => {
                   uri: item.src,
                 }}
               />
-              <Row>
+              <Row style={{ alignItems: "center" }}>
                 <Box style={{ flex: 4 }}>
                   <MarginHorizontal>
                     <H4>{item.name}</H4>
                   </MarginHorizontal>
                 </Box>
                 {variant === "countryCode" && (
-                  <Box>
+                  <Box style={{ flex: 3 }}>
                     <MarginHorizontal>
                       <H4>{item.code}</H4>
                     </MarginHorizontal>

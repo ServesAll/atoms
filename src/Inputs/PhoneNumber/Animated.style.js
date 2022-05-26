@@ -20,15 +20,4 @@ export const BorderWrapper = styled.View`
   border-radius: ${(props) => props.theme.borderRadiusSmall};
   background-color: ${(props) =>
     props.active ? props.theme.color1 : props.theme.color10};
-  ${({ isRightBound, isLeftBound, active }) => {
-    if (isRightBound) {
-      if (!active) {
-        return "borderTopRightRadius: 0px; borderBottomRightRadius: 0px; border-right-width: 0px;";
-      }
-      return "borderTopRightRadius: 0px; borderBottomRightRadius: 0px;";
-    }
-    if (isLeftBound) {
-      return "borderTopLeftRadius: 0px; borderBottomLeftRadius: 0px;";
-    }
-  }}
 `;

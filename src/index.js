@@ -22,7 +22,13 @@ import {
   Box,
   RoundedTopBox,
 } from "./Layout";
-import { Input, AnimatedPlaceholder, InputOtp, InputNormal } from "./Inputs";
+import {
+  Input,
+  AnimatedPlaceholder,
+  InputOtp,
+  InputNormal,
+  InputPhone,
+} from "./Inputs";
 import {
   TextBtn,
   RoundedBtn,
@@ -78,6 +84,7 @@ export {
   InputNormal,
   AnimatedPlaceholder,
   InputOtp,
+  InputPhone,
   TextBtn,
   RoundedBtn,
   RoundBtn,
