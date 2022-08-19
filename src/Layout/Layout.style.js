@@ -105,6 +105,18 @@ export const PaddingBottomElement = styled.View`
   ${(props) => props.style};
 `;
 
+export const PaddingLeftElement = styled.View`
+  padding-left: ${(props) => props.theme.padding};
+  flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
+  ${(props) => props.style};
+`;
+
+export const PaddingRightElement = styled.View`
+  padding-right: ${(props) => props.theme.padding};
+  flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
+  ${(props) => props.style};
+`;
+
 export const RowElement = styled.View`
   flex-direction: row;
   ${(props) => props.style};
