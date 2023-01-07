@@ -75,6 +75,12 @@ export const MarginRightElement = styled.View`
   ${(props) => props.style};
 `;
 
+export const MarginLeftElement = styled.View`
+  margin-left: ${(props) => props.theme.margin};
+  flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};
+  ${(props) => props.style};
+`;
+
 export const PaddingElement = styled.View`
   padding: ${(props) => props.theme.padding};
   flex-direction: ${(props) => props.flexDirection || DEFAULT_FLEX_DIRECTION};

@@ -7,6 +7,7 @@ import MarginVertical from "./MarginVertical";
 import MarginBottom from "./MarginBottom";
 import MarginTop from "./MarginTop";
 import MarginRight from "./MarginRight";
+import MarginLeft from "./MarginLeft";
 import Padding from "./Padding";
 import PaddingHorizontal from "./PaddingHorizontal";
 import PaddingVertical from "./PaddingVertical";
@@ -31,6 +32,7 @@ export {
   MarginBottom,
   MarginTop,
   MarginRight,
+  MarginLeft,
   Padding,
   PaddingHorizontal,
   PaddingVertical,
