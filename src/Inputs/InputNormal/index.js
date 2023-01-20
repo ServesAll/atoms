@@ -95,6 +95,7 @@ const Input = ({
               editable={editable}
               active={isFocused}
               style={style}
+              returnKeyType="done"
             />
           </MarginHorizontal>
         </BorderWrapper>
