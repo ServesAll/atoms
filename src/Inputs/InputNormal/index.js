@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { H4 } from "../../Text";
-import { MarginHorizontal } from "../../Layout";
+import { MarginHorizontal, Row } from "../../Layout";
 import { KeyboardAvoidingView, Platform } from "react-native";
 import { InputWrapper, InputElement, BorderWrapper } from "./Animated.style";
 import Placeholder from "./Placeholder";
@@ -26,6 +26,7 @@ const Input = ({
   error,
   isRightBound = false,
   isLeftBound = false,
+  euro = false,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [textValue, setTextValue] = useState(value || defaultValue);
@@ -80,23 +81,33 @@ const Input = ({
           </Placeholder>
 
           <MarginHorizontal>
-            <InputElement
-              ref={inputRef}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-              onChangeText={(text) => setTextValue(text)}
-              defaultValue={defaultValue}
-              value={value}
-              multiline={multiline}
-              numberOfLines={numberOfLines}
-              maxLength={maxLength}
-              autoFocus={autoFocus}
-              keyboardType={keyboardType}
-              editable={editable}
-              active={isFocused}
-              style={style}
-              returnKeyType="done"
-            />
+            <Row>
+              {euro &&
+                (isFocused ||
+                  (textValue && textValue.length > 0) ||
+                  (value && value.length > 0)) && (
+                  <Row style={{ minHeight: 40, alignItems: "center" }}>
+                    {euro}
+                  </Row>
+                )}
+              <InputElement
+                ref={inputRef}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                onChangeText={(text) => setTextValue(text)}
+                defaultValue={defaultValue}
+                value={value}
+                multiline={multiline}
+                numberOfLines={numberOfLines}
+                maxLength={maxLength}
+                autoFocus={autoFocus}
+                keyboardType={keyboardType}
+                editable={editable}
+                active={isFocused}
+                style={style}
+                returnKeyType="done"
+              />
+            </Row>
           </MarginHorizontal>
         </BorderWrapper>
       </InputWrapper>
