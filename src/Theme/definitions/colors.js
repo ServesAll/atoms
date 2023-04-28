@@ -30,8 +30,9 @@ const colors = {
   color17: "#6c5ce7",
   color18: "#81ecec",
   darkYellow: "#fdcb6e",
-  darkYellowLight: "#FFF2D9",
+  darkYellowLight: "#FFF7E8",
   darkYellowDark: "#8C6F39",
+  darkYellowGray: "#ECE5D8",
   green: "#55efc4",
   greenLight: "#F3FFFC",
   greenDark: "#236A56",
@@ -47,5 +48,9 @@ const colors = {
   purple: "#6c5ce7",
   purpleLight: "#F9F8FF",
   purpleDark: "#372E78",
+  orange: "#FFA15F",
+  orangeLight: "#FFFAF6",
+  orangeDark: "#3D1901",
+  orangeGray: "#EEE5DE",
 };
 export default colors;
