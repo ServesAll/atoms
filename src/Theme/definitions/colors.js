@@ -41,6 +41,7 @@ const colors = {
   red: "#ff7675",
   redlight: "#FFFAF9",
   redDark: "#9C4140",
+  redBorder: "#D2BBBB",
   blue: "#74b9ff",
   blueLight: "#E1F0FF",
   darkBlue: "#0984e3",
