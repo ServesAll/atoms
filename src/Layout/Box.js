@@ -5,7 +5,7 @@ const Box = ({ children, color = "", style, direction = false }) => {
   return (
     <BoxElement
       style={{ backgroundColor: color, ...style }}
-      flexDirection={direction}
+      direction={direction}
     >
       {children}
     </BoxElement>

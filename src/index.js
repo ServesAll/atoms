@@ -52,6 +52,7 @@ import Switch from "./Switch";
 import SwipeButton from "./SlideToConfirm";
 import ErrorText from "./ErrorText";
 import CountryList from "./CountryFlatList";
+import SplashScreen from "./SplashScreen";
 
 export {
   ThemeWrapper,
@@ -109,4 +110,5 @@ export {
   ErrorText,
   AnimatedRoundedButton,
   CountryList,
+  SplashScreen,
 };

@@ -3,7 +3,7 @@ import { MarginLeftElement } from "./Layout.style";
 
 const MarginLeft = ({ children, style, direction = false }) => {
   return (
-    <MarginLeftElement style={style} flexDirection={direction}>
+    <MarginLeftElement style={style} direction={direction}>
       {children}
     </MarginLeftElement>
   );

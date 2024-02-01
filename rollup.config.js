@@ -1,7 +1,6 @@
 // rollup.config.js
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
-import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import nodePolyfills from "rollup-plugin-node-polyfills";
 import image from "@rollup/plugin-image";
@@ -33,6 +32,9 @@ export default {
         "lottie-react-native": "lottie-react-native",
         "@killerwink/lottie-react-native-color":
           "@killerwink/lottie-react-native-color",
+        "prop-types": "PropTypes",
+        "@gorhom/bottom-sheet": "BottomSheet",
+        "react-native-bootsplash": "BootSplash",
       },
     },
   ],
@@ -58,7 +60,8 @@ export default {
     "lottie-react-native",
     "@killerwink/lottie-react-native-color",
     "styled-components/native",
-    "react-native-gesture-handler",
-    "styled-components",
+    "react-native-bootsplash",
+    "@gorhom/bottom-sheet",
+    "prop-types",
   ],
 };

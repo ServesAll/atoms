@@ -3,7 +3,7 @@ import { PaddingBottomElement } from "./Layout.style";
 
 const PaddingBottom = ({ children, style, direction = false }) => {
   return (
-    <PaddingBottomElement style={style} flexDirection={direction}>
+    <PaddingBottomElement style={style} direction={direction}>
       {children}
     </PaddingBottomElement>
   );

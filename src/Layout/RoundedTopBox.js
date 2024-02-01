@@ -11,7 +11,7 @@ const RoundedTopBox = ({ children, color = "", style, direction = false }) => {
         overflow: "hidden",
         ...style,
       }}
-      flexDirection={direction}
+      direction={direction}
     >
       {children}
     </BoxElement>
