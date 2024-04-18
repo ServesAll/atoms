@@ -24,6 +24,10 @@ import {
   WebSmallWrapper,
   Box,
   RoundedTopBox,
+  BorderBottom,
+  BorderTop,
+  BorderBox,
+  ImageWrapper,
 } from "./Layout";
 import {
   Input,
@@ -87,6 +91,10 @@ export {
   WebSmallWrapper,
   Box,
   RoundedTopBox,
+  BorderBottom,
+  BorderTop,
+  BorderBox,
+  ImageWrapper,
   Input,
   InputNormal,
   AnimatedPlaceholder,

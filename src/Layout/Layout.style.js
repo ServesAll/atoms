@@ -141,6 +141,25 @@ export const BoxElement = styled.View`
   ${(props) => props.style};
 `;
 
+export const BorderBottomElement = styled.View`
+  border-bottom-width: 2px;
+  border-color: ${(props) => props.theme.color7};
+  ${(props) => props.style};
+`;
+
+export const BorderTopElement = styled.View`
+  border-top-width: 2px;
+  border-color: ${(props) => props.theme.color7};
+  ${(props) => props.style};
+`;
+
+export const BorderBoxElement = styled.View`
+  border-width: 2px;
+  border-color: ${(props) => props.theme.color7};
+  border-radius: ${(props) => props.theme.borderRadiusSmall};
+  ${(props) => props.style};
+`;
+
 export const FullScreenElement = styled.View`
   position: absolute;
   top: 0;
@@ -156,4 +175,11 @@ export const WebSmallWrapperElement = styled.View`
   flex-direction: ${(props) => props.direction || DEFAULT_FLEX_DIRECTION};
   width: 500px;
   ${(props) => props.style};
+`;
+
+export const ImageWrapperElement = styled.View`
+  border-radius: ${(props) => props.theme.borderRadiusSmall};
+  background-color: ${(props) => props.theme.color7};
+  overflow: hidden;
+  ${(props) => props.styles};
 `;

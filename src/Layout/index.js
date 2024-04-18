@@ -21,6 +21,10 @@ import FullScreen from "./FullScreen";
 import WebSmallWrapper from "./WebSmallWrapper";
 import Box from "./Box";
 import RoundedTopBox from "./RoundedTopBox";
+import BorderBottom from "./BorderBottom";
+import BorderTop from "./BorderTop";
+import BorderBox from "./BorderBox";
+import ImageWrapper from "./ImageWrapper";
 
 export {
   Center,
@@ -46,4 +50,8 @@ export {
   WebSmallWrapper,
   Box,
   RoundedTopBox,
+  BorderBottom,
+  BorderTop,
+  BorderBox,
+  ImageWrapper,
 };

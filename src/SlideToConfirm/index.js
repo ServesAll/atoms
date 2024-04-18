@@ -114,7 +114,18 @@ const SwipeButton = ({
 
   return (
     <Wrapper onLayout={onLayout}>
-      <RoundWrapper style={[animatedBorder]}>
+      <Animated.View
+        style={[
+          animatedBorder,
+          {
+            width: "100%",
+            borderRadius: parseInt(theme.borderRadiusMedium, 10),
+            overflow: "hidden",
+            padding: 8,
+            borderWidth: 2,
+          },
+        ]}
+      >
         <Animated.View
           style={[
             colorWave,
@@ -150,7 +161,7 @@ const SwipeButton = ({
             </RoundSlider>
           </Animated.View>
         </PanGestureHandler>
-      </RoundWrapper>
+      </Animated.View>
     </Wrapper>
   );
 };

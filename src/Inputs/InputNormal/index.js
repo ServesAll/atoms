@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { H4 } from "../../Text";
 import { MarginHorizontal, Row } from "../../Layout";
-import { KeyboardAvoidingView, Platform } from "react-native";
+import { KeyboardAvoidingView, Platform, Keyboard } from "react-native";
 import { InputWrapper, InputElement, BorderWrapper } from "./Animated.style";
 import Placeholder from "./Placeholder";
 
@@ -27,18 +27,42 @@ const Input = ({
   isRightBound = false,
   isLeftBound = false,
   euro = false,
+  focused = () => {},
 }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [textValue, setTextValue] = useState(value || defaultValue);
   const inputRef = useRef();
 
   useEffect(() => {
+    focused();
+  }, [isFocused]);
+
+  useEffect(() => {
     textChange(textValue);
   }, [textValue]);
 
   useEffect(() => {
+    defaultValue && setTextValue(defaultValue);
+  }, [defaultValue]);
+
+  useEffect(() => {
     autoFocus && inputRef.current?.focus();
   }, [autoFocus]);
+
+  function blurTextInput() {
+    inputRef.current?.blur();
+  }
+
+  useEffect(() => {
+    const keyboardDidHideSubscription = Keyboard.addListener(
+      "keyboardDidHide",
+      blurTextInput
+    );
+
+    return () => {
+      keyboardDidHideSubscription?.remove();
+    };
+  }, []);
 
   return (
     <KeyboardAvoidingView
@@ -106,6 +130,7 @@ const Input = ({
                 active={isFocused}
                 style={style}
                 returnKeyType="done"
+                onSubmitEditing={blurTextInput}
               />
             </Row>
           </MarginHorizontal>

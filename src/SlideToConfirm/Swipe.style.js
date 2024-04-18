@@ -14,7 +14,7 @@ export const RoundWrapper = styled(Animated.View)`
   ${(props) => props.style};
 `;
 
-export const RoundSlider = styled.View`
+export const RoundSlider = styled(Animated.View)`
   width: 62px;
   height: 52px;
   background-color: ${(props) => props.theme.color1};
