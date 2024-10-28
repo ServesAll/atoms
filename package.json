@@ -23,7 +23,9 @@
     "react-native-reanimated": "*"
   },
   "dependencies": {
-    "react-native-status-bar-height": "^2.6.0"
+    "@gorhom/bottom-sheet": "^5.0.5",
+    "react-native-status-bar-height": "^2.6.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
