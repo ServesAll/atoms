@@ -88,7 +88,6 @@ export default function NewCustomer({
   }, []);
 
   // variables
-  const snapPoints = useMemo(() => ["90%"], []);
 
   const searchText = (e = "") => {
     let text = e.toLowerCase();
@@ -121,23 +120,26 @@ export default function NewCustomer({
     <BottomSheet
       index={0}
       ref={sheetRef}
-      snapPoints={snapPoints}
+      snapPoints={["90%"]}
       onChange={handleSheetChanges}
       enablePanDownToClose={true}
       keyboardBehavior={"fillParent"}
       ListEmptyComponent={<H4>Not found</H4>}
+      enableDynamicSizing={false}
     >
       <Margin>
         <Input autoFocus={false} {...defaultProps} error="Invalid">
           <H4>Search</H4>
         </Input>
       </Margin>
+
       <BottomSheetFlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={(item) => item.name}
         windowSize={3}
         initialNumToRender={15}
+        keyboardShouldPersistTaps="handled"
         maxToRenderPerBatch={4}
         removeClippedSubviews={false}
         getItemLayout={(data, index) => ({
