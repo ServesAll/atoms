@@ -7,7 +7,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 const PlaceholderElement = React.memo(({ children, active }) => {
-  const top = useSharedValue(active ? 10 : 30);
+  const top = useSharedValue(active ? 10 : 25);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
@@ -23,7 +23,7 @@ const PlaceholderElement = React.memo(({ children, active }) => {
       top.value = 10;
     }
     if (!active) {
-      top.value = 30;
+      top.value = 25;
     }
   }, [active]);
 
