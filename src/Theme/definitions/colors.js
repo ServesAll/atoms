@@ -1,57 +1,70 @@
 const colors = {
-  color1: "#FFFFFF",
-  color2: "#2d3436",
-  color3: "#74b9ff",
-  color3light: "#E1F0FF",
-  color4: "#0984e3",
-  color5: "#ffeaa7",
-  color5light: "#FFF9E5",
-  color5border: "#E4E0D2",
-  color6: "#ff7675",
-  color6light: "#FFDCDB",
-  color7: "#dfe6e9",
-  color8: "#F8F9FB",
-  color9: "#FFA15F",
-  color9light: "#F9F0EA",
-  color9dark: "#804F2D",
-  color9border: "#DDD1C9",
-  color10: "#F2F3F7",
-  color11: "#00b894",
-  color11light: "#EEFFFC",
-  color11border: "#D2E3E0",
-  color12: "#6c5ce7",
-  color12light: "#F5F4FF",
-  color12border: "#DFDDEA",
-  color12dark: "#584E74",
-  color13: "#fab1a0",
-  color14: "#00b894",
-  color15: "#00cec9",
-  color16: "#636e72",
-  color17: "#6c5ce7",
-  color18: "#81ecec",
-  darkYellow: "#fdcb6e",
-  darkYellowLight: "#FFF7E8",
-  darkYellowDark: "#8C6F39",
-  darkYellowGray: "#ECE5D8",
-  green: "#55efc4",
-  greenLight: "#F3FFFC",
-  greenDark: "#236A56",
-  greyText: "#b2bec3",
-  greyButton: "#94A3A9",
-  red: "#ff7675",
-  redlight: "#FFFAF9",
-  redDark: "#9C4140",
-  redBorder: "#D2BBBB",
-  blue: "#74b9ff",
-  blueLight: "#E1F0FF",
-  darkBlue: "#0984e3",
-  darkBlueLight: "#CFEAFF",
-  purple: "#6c5ce7",
-  purpleLight: "#F9F8FF",
-  purpleDark: "#372E78",
-  orange: "#FFA15F",
-  orangeLight: "#FFFAF6",
-  orangeDark: "#3D1901",
-  orangeGray: "#EEE5DE",
+  // Whites & Grays
+  color1: "#FFFFFF", // Pure white
+  color7: "#dfe6e9", // Light gray
+  color8: "#F8F9FB", // Very light gray
+  color10: "#F2F3F7", // Another light gray
+  color16: "#636e72", // Dark gray
+  greyText: "#b2bec3", // Gray for text
+  greyButton: "#94A3A9", // Gray for buttons
+  color2: "#2d3436", // Almost black
+
+  // Blues
+  color3: "#74b9ff", // Light blue
+  color3light: "#E1F0FF", // Very light blue
+  color4: "#0984e3", // Medium blue
+  blue: "#74b9ff", // Light blue (duplicate)
+  blueLight: "#E1F0FF", // Very light blue (duplicate)
+  darkBlue: "#0984e3", // Medium blue (duplicate)
+  darkBlueLight: "#CFEAFF", // Pale blue
+  color15: "#00cec9", // Cyan
+  color18: "#81ecec", // Light cyan
+
+  // Yellows
+  color5: "#ffeaa7", // Light yellow
+  color5light: "#FFF9E5", // Very light yellow
+  color5border: "#E4E0D2", // Yellow border
+  darkYellow: "#fdcb6e", // Dark yellow
+  darkYellowLight: "#FFF7E8", // Light yellow
+  darkYellowDark: "#8C6F39", // Brown yellow
+  darkYellowGray: "#ECE5D8", // Grayish yellow
+
+  // Oranges & Browns
+  color9: "#FFA15F", // Orange
+  color9light: "#F9F0EA", // Light orange
+  color9dark: "#804F2D", // Dark brown
+  color9border: "#DDD1C9", // Orange border
+  color13: "#fab1a0", // Peach
+  orange: "#FFA15F", // Orange (duplicate)
+  orangeLight: "#FFFAF6", // Light orange
+  orangeDark: "#3D1901", // Very dark brown
+  orangeGray: "#EEE5DE", // Grayish orange
+
+  // Reds
+  color6: "#ff7675", // Red
+  color6light: "#FFDCDB", // Light red
+  red: "#ff7675", // Red (duplicate)
+  redlight: "#fff0ed", // Very light red
+  redDark: "#9C4140", // Dark red
+  redBorder: "#D2BBBB", // Red border
+
+  // Greens
+  color11: "#00b894", // Green
+  color11light: "#EEFFFC", // Light green
+  color11border: "#D2E3E0", // Green border
+  color14: "#00b894", // Green (duplicate)
+  green: "#55efc4", // Light green
+  greenLight: "#F3FFFC", // Very light green
+  greenDark: "#236A56", // Dark green
+
+  // Purples
+  color12: "#6c5ce7", // Purple
+  color12light: "#F5F4FF", // Light purple
+  color12border: "#DFDDEA", // Purple border
+  color12dark: "#584E74", // Dark purple
+  color17: "#6c5ce7", // Purple (duplicate)
+  purple: "#6c5ce7", // Purple (duplicate)
+  purpleLight: "#F9F8FF", // Light purple
+  purpleDark: "#372E78", // Dark purple
 };
 export default colors;

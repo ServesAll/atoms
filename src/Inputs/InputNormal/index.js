@@ -91,8 +91,8 @@ const Input = ({
           <Placeholder
             active={
               isFocused ||
-              (textValue && textValue.length > 0) ||
-              (value && value.length > 0)
+              (textValue !== null && String(textValue).trim().length > 0) ||
+              (value !== null && String(value).trim().length > 0)
             }
           >
             <MarginHorizontal>
@@ -108,8 +108,8 @@ const Input = ({
             <Row>
               {euro &&
                 (isFocused ||
-                  (textValue && textValue.length > 0) ||
-                  (value && value.length > 0)) && (
+                  (textValue !== null && String(textValue).trim().length > 0) ||
+                  (value !== null && String(value).trim().length > 0)) && (
                   <Row style={{ minHeight: 40, alignItems: "center" }}>
                     {euro}
                   </Row>
@@ -119,7 +119,7 @@ const Input = ({
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 onChangeText={(text) => setTextValue(text)}
-                defaultValue={defaultValue}
+                defaultValue={String(defaultValue)}
                 value={value}
                 multiline={multiline}
                 numberOfLines={numberOfLines}
