@@ -38,7 +38,9 @@ const Input = ({
   }, [isFocused]);
 
   useEffect(() => {
-    textChange(textValue);
+    if (textValue !== undefined) {
+      textChange(textValue);
+    }
   }, [textValue]);
 
   useEffect(() => {
@@ -114,12 +116,13 @@ const Input = ({
                     {euro}
                   </Row>
                 )}
+
               <InputElement
                 ref={inputRef}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 onChangeText={(text) => setTextValue(text)}
-                defaultValue={String(defaultValue)}
+                defaultValue={defaultValue && String(defaultValue)}
                 value={value}
                 multiline={multiline}
                 numberOfLines={numberOfLines}
