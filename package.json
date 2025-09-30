@@ -1,6 +1,6 @@
 {
   "name": "@servesall/atoms",
-  "version": "1.1.23",
+  "version": "1.1.24",
   "description": "Atoms for react-native",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",

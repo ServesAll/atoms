@@ -29,7 +29,7 @@ const RoundBtn = ({
   });
 
   return (
-    <Animated.View style={[{ flex: 1 }, animatedStyle]}>
+    <Animated.View style={[animatedStyle]}>
       <ButtonStyle
         size={size}
         active={active}
