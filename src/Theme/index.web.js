@@ -1,10 +1,11 @@
 import React from "react";
-import { Appearance } from "react-native";
-import { ThemeProvider, ThemeContext } from "styled-components/native";
+import { ThemeProvider, ThemeContext } from "styled-components";
 import { theme as defaultTheme } from "./definitions";
 const ThemeWrapperContext = React.createContext();
 
-const colorScheme = Appearance.getColorScheme();
+const colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
 
 const ThemeWrapper = ({ children, theme = {} }) => {
   return (

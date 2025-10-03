@@ -1,4 +1,4 @@
-import { ThemeWrapper, useThemeContext } from "./Theme";
+import { ThemeWrapper, useThemeContext } from "./Theme/index.web";
 import { H1, H2, H3, H4, H5, P, Span } from "./Text";
 import {
   Center,
@@ -28,7 +28,6 @@ import {
   BorderTop,
   BorderBox,
   ImageWrapper,
-  Background,
 } from "./Layout";
 import {
   Input,
@@ -96,7 +95,6 @@ export {
   BorderTop,
   BorderBox,
   ImageWrapper,
-  Background,
   Input,
   InputNormal,
   AnimatedPlaceholder,
