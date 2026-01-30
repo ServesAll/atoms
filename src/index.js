@@ -29,6 +29,7 @@ import {
   BorderBox,
   ImageWrapper,
   Background,
+  RoundedBox,
 } from "./Layout";
 import {
   Input,
@@ -97,6 +98,7 @@ export {
   BorderBox,
   ImageWrapper,
   Background,
+  RoundedBox,
   Input,
   InputNormal,
   AnimatedPlaceholder,

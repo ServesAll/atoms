@@ -1,18 +1,21 @@
+// prettier-ignore
+"use client";
 import React from "react";
 import { ThemeProvider, ThemeContext } from "styled-components";
 import { theme as defaultTheme } from "./definitions";
+import { FontStyles } from "./definitions/fonts.import";
+import { useColorScheme } from "./colorScheme.web";
+
 const ThemeWrapperContext = React.createContext();
 
-const colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  ? "dark"
-  : "light";
-
 const ThemeWrapper = ({ children, theme = {} }) => {
+  const colorScheme = useColorScheme();
   return (
     <ThemeWrapperContext.Provider value={{ ...theme }}>
       <ThemeProvider
         theme={{ ...defaultTheme(colorScheme), ...theme, colorScheme }}
       >
+        <FontStyles />
         {children}
       </ThemeProvider>
     </ThemeWrapperContext.Provider>

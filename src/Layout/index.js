@@ -26,6 +26,7 @@ import BorderTop from "./BorderTop";
 import BorderBox from "./BorderBox";
 import ImageWrapper from "./ImageWrapper";
 import Background from "./Background";
+import RoundedBox from "./RoundedBox";
 
 export {
   Center,
@@ -56,4 +57,5 @@ export {
   BorderBox,
   ImageWrapper,
   Background,
+  RoundedBox,
 };
