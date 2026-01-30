@@ -1,5 +1,7 @@
-import { ThemeWrapper, useThemeContext } from "./Theme";
+import { ThemeWrapper, useThemeContext } from "./Theme/index.web";
 import { H1, H2, H3, H4, H5, P, Span } from "./Text";
+import Icon from "./Icons";
+
 import {
   Center,
   CenterLeft,
@@ -31,6 +33,8 @@ import {
   Background,
   RoundedBox,
 } from "./Layout";
+
+/*
 import {
   Input,
   AnimatedPlaceholder,
@@ -58,7 +62,8 @@ import Switch from "./Switch";
 import SwipeButton from "./SlideToConfirm";
 import ErrorText from "./ErrorText";
 import CountryList from "./CountryFlatList";
-//import SplashScreen from "./SplashScreen";
+import SplashScreen from "./SplashScreen";
+*/
 
 export {
   ThemeWrapper,
@@ -99,6 +104,8 @@ export {
   ImageWrapper,
   Background,
   RoundedBox,
+  Icon,
+  /*
   Input,
   InputNormal,
   AnimatedPlaceholder,
@@ -122,5 +129,6 @@ export {
   ErrorText,
   AnimatedRoundedButton,
   CountryList,
-  //SplashScreen,
+  SplashScreen,
+  */
 };

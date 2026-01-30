@@ -1,13 +1,21 @@
 {
   "name": "@servesall/atoms",
-  "version": "1.1.24",
+  "version": "1.1.25",
   "description": "Atoms for react-native",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
+  "main": "dist/bundle.web.esm/src/index.web.js",
+  "react-native": "dist/bundle.cjs.js",
+  "module": "dist/bundle.web.esm/src/index.web.js",
   "files": [
     "dist",
     "src"
   ],
+  "exports": {
+    ".": {
+      "react-native": "./dist/bundle.cjs.js",
+      "default": "./dist/bundle.web.esm/src/index.web.js"
+    },
+    "./*": "./dist/*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm i && rollup -c && npm publish"
@@ -17,15 +25,17 @@
     "url": "git+https://github.com/ServesAll/atoms.git"
   },
   "peerDependencies": {
+    "expo-navigation-bar": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
-    "react-native-reanimated": "*"
+    "react-native-reanimated": "*",
+    "react-native-safe-area-context": "*",
+    "styled-components": "^6.1.13"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^5.0.5",
-    "react-native-status-bar-height": "^2.6.0",
-    "styled-components": "^6.1.13"
+    "react-native-status-bar-height": "^2.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -33,12 +43,15 @@
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "@babel/runtime": "^7.17.9",
+    "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-url": "^8.0.2",
     "rollup": "^2.79.1",
-    "rollup-plugin-node-polyfills": "^0.2.1"
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-preserve-directives": "^0.4.0"
   },
   "author": "",
   "license": "ISC",

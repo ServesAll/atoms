@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavContainer } from "./BottomNavBar.style";
 import BottomNavController from "./BottomNavController";
-import { Keyboard, SafeAreaView } from "react-native";
+import { Keyboard } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const BottomNavBar = (props) => {
   const [isFocused, setIsFocused] = useState(false);

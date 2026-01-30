@@ -10,7 +10,9 @@ const fonts = {
   lhLarge: "39px",
   xlarge: "66px",
   lhXlarge: "69px",
-  fontFamily1: "Cochin",
-  fontFamily2: "Cochin",
+  fontFamily1: "Eesti",
+  fontFamily2: "Eesti",
+  fontWeight1: "400",
+  fontWeight2: "700",
 };
 export default fonts;
